@@ -1,0 +1,59 @@
+/*Header */
+nav ul a {
+  display: block;
+  background-color: #eeeeee;
+  padding: 0.3rem 1.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+nav ul {
+  display: flex;
+  gap: 5.5rem;
+  list-style-type: none;
+  justify-content: center;
+}
+
+.profile-image {
+  width: clamp(150px, 25vw, 300px);
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+/*nav ul {
+  display: flex;
+  gap: 5.5rem;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+header {
+  background-color: #000;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: inherit;
+
+  background-color: #eeeeee;
+  color: #222222;
+  border-radius: 999px;
+}
+
+nav li {
+  width: 140px;
+}
+
+.contact-cards ul {
+  display: flex;
+  gap: 3.5rem;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.contact-cards a {
+  text-decoration: none;
+  color: inherit;
+} */
