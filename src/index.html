@@ -16,8 +16,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -37,48 +38,43 @@
     </header>
 
     <main>
-      <section id="home">
+      <div id="home">
         <div class="profile-image-container">
           <img class="profile-image" src="images/pfp.jpeg" />
+          <h1>Chegofatjo Mawela</h1>
+          <p class="intro-text">
+            I am a Computer Science and Applied Statistics student at the
+            University of Cape Town interested in data science, machine learning
+            and fintech. I've made this website so that it is a lot easier to
+            get to know me and explore my projects and my interests.
+          </p>
         </div>
 
-        <p>Hello, my name is</p>
-        <h1>Chegofatjo Mawela</h1>
-        <p>
-          I am a Computer Science and Applied Statistics student at the
-          University of Cape Town interested in data science, machine learning
-          and fintech. I've made this website so that it is a lot easier to get
-          to know me and explore my projects and my interests.
-        </p>
-        <a href="#projects">View my projects</a>
-      </section>
+        <!-- <p>Hello, my name is</p> -->
 
-      <section id="about">
-        <h2>About Me</h2>
+        <!-- <a href="#projects">View my projects</a> -->
+      </div>
 
-        <p>
-          I was born in Limpopo, Polokwane to my wonderful parents Nichodemus
-          and Maatlape Mawela. I have 2 siblings who are my greatest friends and
-          love spending time with them. I am a developer who enjoys learning
-          about how software works, why it works and how to implement it. I love
-          turning ideas into practical applications and find it so facinating
-          that we are able to have the computational power to solve problems
-          that would have been impossible just 50 years ago.
-        </p>
-
-        <p>
-          My favorite fields of study is machine learning and statistics,
-          specifically using them to model financial markets. This interest was
-          developed when I started trading in grade 10 and realised that the
-          edge produced by trendlines and "patterns" has long been used up in
-          the markets. I've had a succesful track record at UCT, having had
-          distinctions for all the courses I have taken and have been on the
-          deans list since first year.
-        </p>
-        <a href="data/transcript.jpg">View my transcript here</a>
-      </section>
-
-      <section id="contact">
+      <div id="project-display">
+        <h2>Projects Preview</h2>
+        <ul class="project-list">
+          <li>
+            <img src="images/proj1.png" />
+            <p>Process Scheduling Simulation</p>
+          </li>
+          <li>
+            <img src="images/proj2.png" />
+            <p>Text-to-Phoneme Encoder-Decoder</p>
+          </li>
+          <li>
+            <img src="images/proj3.png" />
+            <p>Image classification CNN</p>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <footer>
+      <div id="contact">
         <h2>Contact Me</h2>
         <p>
           If you have any project collaborations in mind feel free to contact
@@ -104,11 +100,8 @@
             </li>
           </ul>
         </div>
-      </section>
-
-      <footer>
-        <p>&copy; Chegofatjo</p>
-      </footer>
-    </main>
+      </div>
+      <!-- <p>&copy; Chegofatjo</p> -->
+    </footer>
   </body>
 </html>

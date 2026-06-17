@@ -3,31 +3,44 @@
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
+  background-color: black;
 }
 
 /*Header */
 header {
-  background-color: #2b2b2b;
+  background-color: #0c0c0c;
   padding: 1rem 2rem;
 }
 nav ul a {
   display: block;
-  background-color: #eeeeee;
+  background-color: #f2f2f2;
   padding: 0.3rem 1.5rem;
-  border-radius: 999px;
+  border-radius: 10px;
   text-decoration: none;
-  color: inherit;
+  color: #1f1f1f;
   text-align: center;
 }
 
 nav ul {
   display: flex;
-  gap: 10%;
+  gap: 5%;
   list-style-type: none;
   justify-content: center;
 }
 
+#home {
+  padding-top: 1rem;
+}
 /*Profile*/
+
+.profile-image-container {
+  /* background-color: #2b2b2b; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: clamp(1.5rem, 4vw, 3rem);
+  padding-bottom: 0;
+}
 
 .profile-image {
   width: clamp(150px, 25vw, 300px);
@@ -36,40 +49,117 @@ nav ul {
   object-fit: cover;
 }
 
-/*nav ul {
-  display: flex;
-  gap: 5.5rem;
-  justify-content: center;
+.intro-text {
+  max-width: 85%;
+  background-color: #2b2b2b;
+  padding: 1rem 1rem;
+  border-radius: 20px;
+  color: white;
+}
+
+/*Main content*/
+main {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+/* Project preview */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
   list-style: none;
+  margin: 0;
   padding: 0;
+  text-align: center;
 }
 
-header {
-  background-color: #000;
+.project-list img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 12%;
+  display: block;
+  filter: blur(1px);
+}
+.project-list img:hover {
+  filter: blur(0);
+  cursor: pointer;
 }
 
-nav ul a {
-  text-decoration: none;
-  color: inherit;
-
-  background-color: #eeeeee;
-  color: #222222;
-  border-radius: 999px;
+#project-display {
+  /* background-color: grey; */
+  /* padding: 5rem; */
+  text-align: center;
+  color: white;
 }
 
-nav li {
-  width: 140px;
+.project-list p {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  line-height: 1.5;
+}
+
+footer {
+  /* background-color: #0c0c0c;
+  color: white;
+  margin: 0; */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 3rem);
+  background-color: #2b2b2b;
+  color: white;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#contact {
+  max-width: 50rem;
+  margin-inline: auto;
+}
+
+#contact h2 {
+  margin-top: 0;
 }
 
 .contact-cards ul {
   display: flex;
-  gap: 3.5rem;
   justify-content: center;
+  gap: clamp(1rem, 3vw, 2rem);
+  flex-wrap: wrap;
   list-style: none;
+  margin: 0;
   padding: 0;
 }
 
-.contact-cards a {
+.contact-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(3rem, 6vw, 4rem);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: #eeeeee;
+  color: #222222;
   text-decoration: none;
-  color: inherit;
-} */
+}
+
+.contact-icon {
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+}
+
+footer > p {
+  margin-top: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+#project-display {
+  padding: clamp(1rem, 3vw, 2rem);
+  margin-bottom: clamp(2rem, 3vw, 4rem);
+}
