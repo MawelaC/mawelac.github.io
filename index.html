@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Chegofatjo Mawela" />
     <meta name="description" content="Personal Website" />
     <meta
@@ -35,11 +35,11 @@
           <li>
             <a href="/"><i class="fa-solid fa-house"></i></a>
           </li>
-          <li><a href="#about">About</a></li>
-          <li><a href="test.html">Projects</a></li>
+          <!-- <li><a href="#about">About</a></li> -->
+          <li><a href="#project-display">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
+          <li><a href="#trades">Trades</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#hobbies">Hobbies</a></li>
         </ul>
       </nav>
     </header>
@@ -52,7 +52,7 @@
           <p class="profile-role">
             Computer Science and Applied Statistics Student (UCT)
           </p>
-          <p class="intro-text">
+          <p class="paragraph-text">
             I am a Computer Science and Applied Statistics student at the
             University of Cape Town interested in data science, machine learning
             and fintech. I've made this website so that it is a lot easier to
@@ -65,7 +65,7 @@
         <!-- <a href="#projects">View my projects</a> -->
       </div>
 
-      <div id="project-display">
+      <section id="project-display" class="reveal">
         <h2>Projects Preview</h2>
         <ul class="project-list">
           <li>
@@ -73,15 +73,54 @@
             <p>Process Scheduling Simulation</p>
           </li>
           <li>
-            <img src="images/proj2.png" />
+            <img src="images/proj3.png" />
             <p>Text-to-Phoneme Encoder-Decoder</p>
           </li>
           <li>
-            <img src="images/proj3.png" />
+            <img src="images/proj4.png" />
             <p>Image classification CNN</p>
           </li>
         </ul>
-      </div>
+      </section>
+
+      <section id="skills" class="reveal">
+        <h2>Skills</h2>
+
+        <ul id="skills-list">
+          <li>
+            <a
+              href="data/UCT_SRETSRPT.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img src="images/transcript.png"
+            /></a>
+            <p>UCT transcript</p>
+          </li>
+          <li>
+            <a
+              href="data/chegofatjo_resume_cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img src="images/cv.png"
+            /></a>
+            <p>CV</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="trades" class="reveal">
+        <h2>Live Trades</h2>
+        <p class="paragraph-text">
+          I work on a lot of financial advisors (trading bots) that use
+          different self-made algorithms. Below I'll be sharing any live-trades
+          that I have open for the day, these trades are associated with their
+          own expert advisor. To maintain my edge, I will share my live trades
+          here without sharing the underlying decision making.
+        </p>
+        <div>
+          <h3 id="trades-now">No current trades</h3>
+        </div>
+      </section>
     </main>
     <footer>
       <div id="contact">
@@ -113,5 +152,30 @@
       </div>
       <!-- <p>&copy; Chegofatjo</p> -->
     </footer>
+    <script>
+      // Selects all elements that should reveal on scroll
+      const revealElements = document.querySelectorAll(".reveal");
+
+      // Watches when each reveal element enters the screen
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            // If the element is visible on screen
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show"); // Adds the show class
+              observer.unobserve(entry.target); // Stops watching after first animation
+            }
+          });
+        },
+        {
+          threshold: 0.15, // Runs when 15% of the section is visible
+        },
+      );
+
+      // Starts observing each reveal element
+      revealElements.forEach((element) => {
+        observer.observe(element);
+      });
+    </script>
   </body>
 </html>
